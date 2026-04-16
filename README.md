@@ -43,3 +43,4 @@ Permite registrar ventas, calcular deudas automáticamente y visualizar historia
 
 ## 📦 Instalación
 
+👉 [Descargar última versión](https://github.com/JVMateo2003/roadApp_android/releases)
