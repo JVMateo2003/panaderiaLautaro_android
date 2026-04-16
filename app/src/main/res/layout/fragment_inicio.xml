@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".fragment.FragmentInicio">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <ImageView
+            android:layout_gravity="end"
+            android:id="@+id/btnMenu"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/cuadros" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:src="@drawable/ic_logo" />
+
+
+        <Button
+            android:id="@+id/btnCargaProduccion"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cuadros"
+            android:text="@string/btn_cargarProduccion"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnCargarVentas"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cuadros"
+            android:text="@string/btn_cargarVentas"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/btnResumen"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cuadros"
+            android:text="@string/btn_Resumen"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</FrameLayout>

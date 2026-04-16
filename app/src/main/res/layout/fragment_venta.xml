@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentVenta">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+
+        <Spinner
+            android:id="@+id/sp_clientes"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/cuadros"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_deuda_cliente"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:background="@color/cuadros"
+            android:gravity="center"
+            android:text="Deuda: 0"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sp_clientes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sp_clientes" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_varilla"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="@+id/sp_clientes"
+            app:layout_constraintTop_toBottomOf="@+id/sp_clientes">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_varilla"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_varilla"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_varilla"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_bollo"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_clientes">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_bollo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_bollo"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_bollo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_criollo"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="@+id/cv_varilla"
+            app:layout_constraintTop_toBottomOf="@+id/cv_varilla">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_criollo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_criollo"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_criollo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_otro"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/cv_bollo"
+            app:layout_constraintTop_toBottomOf="@+id/cv_bollo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_otro"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_otro"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_otro"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cuadros"
+            android:gravity="center"
+            android:text="@string/tv_total"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_otro" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_pago"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_total"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_pago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/tv_pago"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_pago"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_pago_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Pago Total"
+            android:backgroundTint="@color/bordes"
+            app:layout_constraintBottom_toBottomOf="@+id/cv_pago"
+            app:layout_constraintEnd_toEndOf="@+id/tv_total"
+            app:layout_constraintTop_toTopOf="@+id/cv_pago" />
+
+
+        <TextView
+            android:id="@+id/tv_diferencia"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/cuadros"
+            android:gravity="center"
+            android:text="@string/tv_diferencia"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/tv_deuda"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tv_total"
+            app:layout_constraintTop_toBottomOf="@+id/cv_pago" />
+
+        <TextView
+            android:id="@+id/tv_deuda"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/cuadros"
+            android:gravity="center"
+            android:text="@string/tv_deuda"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_diferencia"
+            app:layout_constraintEnd_toEndOf="@+id/tv_total"
+            app:layout_constraintStart_toEndOf="@+id/tv_diferencia" />
+
+        <Button
+            android:id="@+id/btn_calcular_venta"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/cuadros"
+            android:text="CONFIRMAR"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_diferencia" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

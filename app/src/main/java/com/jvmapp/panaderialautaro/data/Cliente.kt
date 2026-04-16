@@ -1,0 +1,12 @@
+package com.jvmapp.panaderialautaro.data
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "clientes")
+data class Cliente(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val nombre: String,
+    val tipoPrecio: String,
+    val activo: Boolean
+)

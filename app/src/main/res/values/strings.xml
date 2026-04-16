@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Main activity -->
+    <string name="app_name">Panaderia lautaro</string>
+    <string name="btn_cargarProduccion">CARGAR PRODUCCION</string>
+    <string name="btn_cargarVentas">CARGAR VENTAS</string>
+    <string name="btn_Resumen">VER RESUMEN DEL DIA</string>
+    <string name="titulo_cargar">ELIGE EL CLIENTE</string>
+    <string name="titulo_nuevoCliente">NUEVO CLIENETE</string>
+    <string name="titulo_borrarCliente">BORRAR CLIENTE</string>
+
+    <!-- Fragment Ventas -->
+    <string name="spn_clientes">CLIENTE</string>
+    <string name="tv_varilla">VARILLAS</string>
+    <string name="tv_bollo">BOLLOS</string>
+    <string name="tv_criollo">CRIOLLOS</string>
+    <string name="tv_otro">OTRO</string>
+    <string name="tv_total">TOTAL: $________</string>
+    <string name="tv_pago">PAGO: $</string>
+    <string name="tv_diferencia">DIFERENCIA</string>
+    <string name="tv_deuda">VUELTO</string>
+
+    <!-- Fragment Clientes -->
+    <string name="tv_nuevo_cliente">CARGAR NUEVO CLIENTE</string>
+    <string name="tv_editar_cliente">EDITAR CLIENTE</string>
+    <string name="btn_guardar_cliente">GUARDAR CLIENTE</string>
+    <string name="btn_cambiar_nombre">CAMBIAR NOMBRE</string>
+
+    <!-- Item Cliente Historial -->
+    <string name="tv_Nombre">CLIENTE</string>
+    <string name="titulo_fecha">FECHA</string>
+    <string name="tv_total_historial">TOTAL</string>
+    <string name="tv_estado">ESTADO</string>
+
+</resources>
