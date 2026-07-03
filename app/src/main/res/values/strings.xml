@@ -9,6 +9,17 @@
     <string name="titulo_nuevoCliente">NUEVO CLIENETE</string>
     <string name="titulo_borrarCliente">BORRAR CLIENTE</string>
 
+    <!-- Fragment Produccion -->
+    <string name="tv_titulo_produccion">PRODUCCION</string>
+    <string name="tv_titulo_sobro">SOBRO</string>
+    <string name="spn_produccion_clientes">CLIENTE</string>
+    <string name="tv_produccion_varilla">VARILLAS</string>
+    <string name="tv_produccion_bollo">BOLLOS</string>
+    <string name="tv_produccion_criollo">CRIOLLOS</string>
+    <string name="tv_produccion_otro">OTRO</string>
+    <string name="btn_produccion_guardar">GUARDAR</string>
+    <string name="tv_produccion_sobro">SOBRO: </string>
+
     <!-- Fragment Ventas -->
     <string name="spn_clientes">CLIENTE</string>
     <string name="tv_varilla">VARILLAS</string>
@@ -31,5 +42,9 @@
     <string name="titulo_fecha">FECHA</string>
     <string name="tv_total_historial">TOTAL</string>
     <string name="tv_estado">ESTADO</string>
+
+    <!-- Fragment Precios -->
+    <string name="titulo_precios">CARGAR NUEVO PRECIO</string>
+    <string name="btn_guardar_nuevo_precio">GUARDAR NUEVO PRECIO</string>
 
 </resources>

@@ -1,6 +1,5 @@
 package com.jvmapp.panaderialautaro.data
 
-import androidx.room.*
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -18,7 +17,7 @@ interface ClienteDao {
     suspend fun obtenerClientesActivos(): List<Cliente>
 
     @Query("SELECT * FROM clientes WHERE id = :id")
-    suspend fun obtenerClientePorId(id: Int): Cliente?
+    suspend fun obtenerPorId(id: Int): Cliente?
 
     @Query("SELECT * FROM clientes")
     suspend fun obtenerTodos(): List<Cliente>

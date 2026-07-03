@@ -12,6 +12,13 @@
         android:layout_margin="30dp">
 
         <Spinner
+            android:id="@+id/sp_tipo_precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cuadros"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Spinner
             android:id="@+id/sp_clientes"
             android:layout_width="170dp"
             android:layout_height="50dp"

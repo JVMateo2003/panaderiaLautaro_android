@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Título -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bordes"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="26dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Registrar transferencia"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Spinner cliente -->
+        <Spinner
+            android:id="@+id/spn_cliente_transferencia"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/cuadros"/>
+
+        <!-- Deuda actual del cliente -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bordes"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="26dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_deuda_actual_transferencia"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Deuda actual: -"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Monto transferido -->
+        <EditText
+            android:id="@+id/et_monto_transferencia"
+            android:hint="Monto transferido"
+            android:textColorHint="@color/gris"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/cuadros"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"/>
+
+        <!-- Deuda restante después del pago -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bordes"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="26dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_deuda_restante"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Deuda restante: -"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botón confirmar -->
+        <Button
+            android:id="@+id/btn_confirmar_transferencia"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/cuadros"
+            android:text="Confirmar transferencia"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+</FrameLayout>

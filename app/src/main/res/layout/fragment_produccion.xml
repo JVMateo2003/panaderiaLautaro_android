@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_titulo_produccion"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_varilla"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_varilla"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_varilla"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_varilla"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_bollo"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_bollo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_bollo"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_bollo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_criollo"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_produccion_varilla">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_criollo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_criollo"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_criollo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_otro"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_produccion_bollo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_otro"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_otro"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_otro"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_produccion_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="@string/btn_produccion_guardar"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/cuadros"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_produccion_criollo" />
+
+        <TextView
+            android:id="@+id/titulo_sobro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_titulo_sobro"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_produccion_guardar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_sobro_varilla"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_sobro">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_sobro_varilla"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_varilla"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_sobro_varilla"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_sobro_bollo"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_sobro">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_sobro_bollo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_bollo"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_sobro_bollo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_produccion_sobro_criollo"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/bordes"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_produccion_sobro_varilla">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_produccion_sobro_criollo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tv_produccion_criollo"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_produccion_sobro_criollo"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:inputType="textVisiblePassword" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

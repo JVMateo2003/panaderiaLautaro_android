@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fondo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bordes"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="26dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="@string/titulo_precios"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/et_nombre_precio"
+            android:hint="Nombre del tipo de precio"
+            android:textColorHint="@color/gris"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/cuadros"
+            android:padding="5dp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_precio_varilla_bollo"
+                android:hint="PAN"
+                android:textColorHint="@color/gris"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cuadros"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/et_precio_criollo"
+                android:hint="CRIOLLO"
+                android:textColorHint="@color/gris"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/cuadros"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_guardar_nuevo_precio"
+            android:text="@string/btn_guardar_nuevo_precio"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/bordes"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bordes"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="26dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Editar precio existente"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Spinner
+            android:id="@+id/spn_tipos_precio"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cuadros"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_editar_precio_varilla_bollo"
+                android:hint="PAN"
+                android:textColorHint="@color/gris"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cuadros"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/et_editar_precio_criollo"
+                android:hint="CRIOLLO"
+                android:textColorHint="@color/gris"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/cuadros"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_actualizar_precio"
+            android:text="Actualizar precio"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/bordes"/>
+
+    </LinearLayout>
+</FrameLayout>

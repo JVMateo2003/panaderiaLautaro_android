@@ -38,6 +38,14 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <Spinner
+            android:id="@+id/spn_precio"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/cuadros"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
         <EditText
             android:id="@+id/et_nombre"
             android:hint="Nombre del cliente"
@@ -82,6 +90,14 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <Spinner
+            android:id="@+id/spn_precio_editar"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/cuadros"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
 
         <Spinner
             android:id="@+id/spn_editar_cliente"

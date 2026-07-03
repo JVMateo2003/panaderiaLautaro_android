@@ -6,7 +6,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "ventas",
+    tableName = "pagos",
     foreignKeys = [
         ForeignKey(
             entity = Cliente::class,
@@ -17,17 +17,11 @@ import androidx.room.PrimaryKey
     ],
     indices = [Index("clienteId")]
 )
-data class Venta(
+data class Pago(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val clienteId: Int,
-    val tipoPrecioId: Int,
     val fecha: Long,
-    val kgVarilla: Double,
-    val kgBollo: Double,
-    val kgCriollo: Double,
-    val otroMonto: Double,
-    val total: Double,
-    val pagado: Double,
-    val diferencia: Double
+    val monto: Double,
+    val tipo: String // "efectivo" o "transferencia"
 )
