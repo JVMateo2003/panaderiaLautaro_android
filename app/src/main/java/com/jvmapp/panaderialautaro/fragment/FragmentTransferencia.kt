@@ -81,12 +81,26 @@ class FragmentTransferencia : Fragment(R.layout.fragment_transferencia) {
             val ventas = db.ventaDao().obtenerVentasDeCliente(clienteId)
             val pagos = db.pagoDao().obtenerPagosDeCliente(clienteId)
 
-            val deudaVentas = ventas.sumOf { if (it.diferencia < 0) -it.diferencia else 0.0 }
-            val totalPagos = pagos.filter { it.tipo == "transferencia" }.sumOf { it.monto }
-            deudaActual = (deudaVentas - totalPagos).coerceAtLeast(0.0)
+            val saldoVentas = ventas.sumOf { it.diferencia }
+            val totalTransferencias = pagos.filter { it.tipo == "transferencia" }.sumOf { it.monto }
+            val saldoReal = saldoVentas + totalTransferencias
 
-            tvDeudaActual.text = "Deuda actual: $${"%.2f".format(deudaActual)}"
-            tvDeudaActual.setTextColor(if (deudaActual > 0) Color.RED else Color.GREEN)
+            deudaActual = if (saldoReal < 0) -saldoReal else 0.0
+
+            when {
+                saldoReal < 0 -> {
+                    tvDeudaActual.text = "Deuda: $${"%.2f".format(-saldoReal)}"
+                    tvDeudaActual.setTextColor(Color.RED)
+                }
+                saldoReal > 0 -> {
+                    tvDeudaActual.text = "Saldo a favor: $${"%.2f".format(saldoReal)}"
+                    tvDeudaActual.setTextColor(Color.GREEN)
+                }
+                else -> {
+                    tvDeudaActual.text = "Sin deuda"
+                    tvDeudaActual.setTextColor(Color.GREEN)
+                }
+            }
 
             etMonto.text.clear()
             actualizarDeudaRestante()

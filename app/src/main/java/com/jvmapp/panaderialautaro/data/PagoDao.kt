@@ -14,4 +14,7 @@ interface PagoDao {
 
     @Query("SELECT * FROM pagos WHERE fecha BETWEEN :inicio AND :fin")
     suspend fun obtenerPagosDelDia(inicio: Long, fin: Long): List<Pago>
+
+    @Query("SELECT * FROM pagos")
+    suspend fun obtenerTodosLosClientes(): List<Pago>
 }

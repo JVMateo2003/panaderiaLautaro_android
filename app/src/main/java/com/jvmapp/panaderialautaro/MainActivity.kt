@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Botones del menú lateral
-        findViewById<Button>(R.id.btn_menu_resumen_diario).setOnClickListener {
-            abrirFragment(FragmentResumen())
+        findViewById<Button>(R.id.btn_menu_deudas).setOnClickListener {
+            abrirFragment(FragmentDeudas())
             drawerLayout.closeDrawer(GravityCompat.END)
         }
         findViewById<Button>(R.id.btn_menu_clientes).setOnClickListener {

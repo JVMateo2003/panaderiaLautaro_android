@@ -29,14 +29,15 @@
             android:layout_marginBottom="40dp">
 
             <Button
-                android:id="@+id/btn_menu_resumen_diario"
+                android:id="@+id/btn_menu_deudas"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/cuadros"
                 android:layout_marginTop="20dp"
-                android:text="Resumen diario"
+                android:text="Deudas"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/btn_menu_clientes"
@@ -45,7 +46,8 @@
                 android:backgroundTint="@color/cuadros"
                 android:text="Clientes"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/btn_menu_historial"
@@ -54,7 +56,8 @@
                 android:backgroundTint="@color/cuadros"
                 android:text="Historial"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/btn_menu_precios"
@@ -63,7 +66,8 @@
                 android:backgroundTint="@color/cuadros"
                 android:text="precios"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <Button
                 android:id="@+id/btn_menu_trandferencia"
@@ -72,7 +76,8 @@
                 android:backgroundTint="@color/cuadros"
                 android:text="transferencias"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 

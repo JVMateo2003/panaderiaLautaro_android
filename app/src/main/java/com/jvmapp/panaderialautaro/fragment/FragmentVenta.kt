@@ -226,12 +226,29 @@ class FragmentVenta : Fragment(R.layout.fragment_venta) {
             val ventas = db.ventaDao().obtenerVentasDeCliente(clienteId)
             val pagos = db.pagoDao().obtenerPagosDeCliente(clienteId)
 
-            val deudaVentas = ventas.sumOf { if (it.diferencia < 0) -it.diferencia else 0.0 }
-            val totalPagos = pagos.filter { it.tipo == "transferencia" }.sumOf { it.monto }
-            val deudaReal = deudaVentas - totalPagos
+            // Suma todas las diferencias — negativo es deuda, positivo es vuelto/saldo
+            val saldoVentas = ventas.sumOf { it.diferencia }
 
-            tvDeudaCliente.text = "Deuda: ${"%.2f".format(if (deudaReal > 0) deudaReal else 0.0)}"
-            tvDeudaCliente.setTextColor(if (deudaReal > 0) Color.RED else Color.GREEN)
+            // Suma todas las transferencias
+            val totalTransferencias = pagos.filter { it.tipo == "transferencia" }.sumOf { it.monto }
+
+            // Saldo real: negativo = debe, positivo = a favor
+            val saldoReal = saldoVentas + totalTransferencias
+
+            when {
+                saldoReal < 0 -> {
+                    tvDeudaCliente.text = "Deuda: $${"%.2f".format(-saldoReal)}"
+                    tvDeudaCliente.setTextColor(Color.RED)
+                }
+                saldoReal > 0 -> {
+                    tvDeudaCliente.text = "Saldo a favor: $${"%.2f".format(saldoReal)}"
+                    tvDeudaCliente.setTextColor(Color.GREEN)
+                }
+                else -> {
+                    tvDeudaCliente.text = "Sin deuda"
+                    tvDeudaCliente.setTextColor(Color.GREEN)
+                }
+            }
         }
     }
 

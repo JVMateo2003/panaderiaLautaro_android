@@ -35,7 +35,8 @@
                     android:layout_height="40dp"
                     android:layout_margin="20dp"
                     android:backgroundTint="@color/cuadros"
-                    android:text="Descargar"/>
+                    android:text="Descargar"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 

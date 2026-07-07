@@ -41,6 +41,16 @@ interface VentaDao {
     """)
     suspend fun obtenerVentasDelDia(inicio: Long, fin: Long): List<VentaConCliente>
 
+    @Query("""
+    SELECT clientes.id as clienteId, clientes.nombre as clienteNombre, 
+    COALESCE(SUM(ventas.diferencia), 0) as saldoVentas
+    FROM clientes 
+    LEFT JOIN ventas ON clientes.id = ventas.clienteId
+    WHERE clientes.activo = 1
+    GROUP BY clientes.id
+""")
+    suspend fun obtenerSaldoPorCliente(): List<SaldoCliente>
+
     @Query("DELETE FROM ventas WHERE id = :ventaId")
     suspend fun eliminar(ventaId: Int)
 }
